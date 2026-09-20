@@ -1,0 +1,17 @@
+{
+  "cascadeColors": false,
+  "colorBackground": true,
+  "palette": [
+    {
+      "id": "glpq87vxwFHu6jQ5uA1tk",
+      "name": "",
+      "value": "#ffff00"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "School",
+      "color": "glpq87vxwFHu6jQ5uA1tk"
+    }
+  ]
+}

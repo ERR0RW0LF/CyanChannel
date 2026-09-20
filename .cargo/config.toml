@@ -1,0 +1,13 @@
+[target.'cfg(all(windows, target_env = "msvc"))']
+rustflags = ["-C", "target-feature=+crt-static"]
+
+[build]
+rustflags = [
+    "-Z", "threads=8",
+    "-Z", "location-detail=none",
+    "-Z", "fmt-debug=none",
+    "-C", "panic=abort",
+]
+
+[unstable]
+build-std = ["std", "panic_abort"]

@@ -1,0 +1,27 @@
+cargo-features = ["trim-paths","panic-immediate-abort"]
+
+[workspace]
+resolver = "3"
+members = [
+    "clients/*", "cyan-channel-core",
+    "servers/base_server"
+]
+
+[workspace.package]
+name = "CyanChannel"
+version = "0.1.0"
+
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.release]
+trim-paths = "all"
+debug = false
+strip = "symbols"
+panic = "immediate-abort"
+
+[workspace.dependencies]
+tokio = { version = "1.53.1", features = ["full"] }
+if-addrs = "0.15.0"
+tokio-util = "0.7.19"
